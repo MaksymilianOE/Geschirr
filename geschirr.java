@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 //TODO: Array auffüllen DONE
 //TODO: Array umdrehen
-//TODO: in Array reinböllern
+//TODO: Wörter in Array reinböllern
 
 public class geschirr {
     public static void main(String[] args) {
@@ -13,12 +13,14 @@ public class geschirr {
 
             String[] dummyWerte = {"Teller", "Tasse", "Messer", "Gabel", "Pfanne"};
             String[] checkedArray = checkArray(args, dummyWerte);
-            //System.out.println(Arrays.toString(checkedArray));
-            System.out.println(Arrays.toString(turnArray(checkedArray)));
+            System.out.println("Neuer Array: " + Arrays.toString(checkedArray));
+
+            String[] gedrehterArray = turnArray(checkedArray);
+            System.out.println("Gedrehter Array: " + Arrays.toString(gedrehterArray));
         } catch (Exception e) {
             System.out.println("Ein Fehler ist aufgetreten! Bitte versche es erneut! " + e);
         }
-        }
+    }
 
     public static String[] turnArray(String[] arr) {
         //System.out.println("Argumente: " + Arrays.toString(arr));
@@ -35,7 +37,7 @@ public class geschirr {
 
         String[] returnArray = new String[5];
         if (args.length == 5) {
-            System.arraycopy(args, 0, returnArray, 0, args.length - 1 + 1); //Kopiert den Array (Vorschlag IDE) ?!
+            System.arraycopy(args, 0, returnArray, 0, args.length); //Kopiert den Array (Vorschlag IDE) ?!
         } else if (args.length > 5) {
             System.out.println("Es wurden zu viele Untensilien angegeben! Es werden nur die ersten 5 berücksichtigt!");
             System.arraycopy(args, 0, returnArray, 0, args.length - 1); //Kopiert den Array (Vorschlag IDE) ?!
