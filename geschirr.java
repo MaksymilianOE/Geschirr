@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
 //TODO: Array auffüllen DONE
-//TODO: Array umdrehen
-//TODO: Wörter in Array reinböllern
+//TODO: Array umdrehen DONE
+//TODO: Wörter in Array reinböllern DONE
 
 public class geschirr {
     public static void main(String[] args) {
